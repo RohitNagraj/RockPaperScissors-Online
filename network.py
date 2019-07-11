@@ -34,6 +34,8 @@ class Network:
     def send(self, data):
         """
         Send data from client to server and receive data from server
+        Data from client to server is encoded string
+        Data from server to client is pickle object
         :param data: (string) data to send
         :return: (game instance) updated game instance
         """
