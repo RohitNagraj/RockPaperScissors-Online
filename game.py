@@ -19,4 +19,35 @@ class Game:
         else:
             self.p2Went = True
 
-            
+    def connected(self):
+        return self.ready
+
+    def both_went(self):
+        return self.p1Went and self.p2Went
+
+    def winner(self):
+
+        p1 = self.moves[0].upper()[0]
+        p2 = self.moves[1].upper()[0]
+
+        winner = -1
+
+        if p1 == "P" and p2 == "R":
+            winner = 0
+
+        elif p1 == "P" and p2 == "S":
+            winner = 1
+
+        elif p1 == "R" and p2 == "P":
+            winner = 1
+
+        elif p1 == "R" and p2 == "S":
+            winner = 0
+
+        elif p1 == "S" and p2 == "P":
+            winner = 0
+
+        elif p1 == "S" and p2 == "R":
+            winner = 1
+
+        return winner
