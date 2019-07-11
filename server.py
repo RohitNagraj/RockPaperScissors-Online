@@ -17,6 +17,10 @@ except socket.error as e:
 s.listen(2)
 print("Server started, waiting for connection...")
 
+connected = set()
+games = {}
+idCount = 0
+
 
 def threaded_client(conn, p, gameID):
     pass
@@ -25,3 +29,16 @@ def threaded_client(conn, p, gameID):
 while True:
     conn, addr = s.accept()
     print("Connected to", addr)
+
+    idCount += 1
+    p = 0
+    gameId = (idCount - 1) // 2
+    if idCount % 2:
+        games[gameId] = Game(gameId)
+        print("Creating new game")
+
+    else:
+        games[gameId].ready = True
+        p = 1
+
+    _thread.start_new_thread(threaded_client, (conn,))
