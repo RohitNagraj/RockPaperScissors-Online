@@ -83,7 +83,7 @@ class Game:
 
         return winner
 
-    def reset_went(self):
+    def reset(self):
         """
         Reset both the went booleans
         :return: None
