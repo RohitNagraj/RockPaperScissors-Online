@@ -10,4 +10,13 @@ class Game:
 
     def get_player_move(self, p):
         return self.moves[p]
-    
+
+    def player(self, player, move):
+        self.moves[player] = move
+
+        if player == 0:
+            self.p1Went = True
+        else:
+            self.p2Went = True
+
+            
