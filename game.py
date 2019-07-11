@@ -51,3 +51,7 @@ class Game:
             winner = 1
 
         return winner
+
+    def reset_went(self):
+        self.p1Went = False
+        self.p2Went = False
