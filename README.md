@@ -11,6 +11,6 @@ This runs on a server that handles each game individually and each game instance
 * Run as many `client.py` instances as you want!
 
 ## Screenshots
-![Alt](/Screenshots/Waiting.png "Waiting Screen")
-![Alt](/Screenshots/Playing.png "Game Screen")
-![Alt](/Screenshots/Complete.png "Win Screen")
+![Alt](/Screenshots/waiting.png "Waiting Screen")
+![Alt](/Screenshots/playing.png "Game Screen")
+![Alt](/Screenshots/complete.png "Win Screen")
