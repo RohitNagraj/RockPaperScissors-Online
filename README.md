@@ -1,7 +1,7 @@
 # RockPaperScissors-Online
-An online version of Rock Paper Scissors game made with PyGame and Socket <br />
+An online version of Rock Paper Scissors game made with PyGame and Socket. <br />
 This runs on a server that handles each game individually and each game instance has 2 clients attached to it. <br />
-Can be played with anyone anywhere across the world <br />
+Can be played with anyone anywhere across the world. <br />
 
 ## Installation
 * Clone the repo
