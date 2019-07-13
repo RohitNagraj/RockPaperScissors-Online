@@ -12,7 +12,10 @@ class Network:
         self.server = "192.168.0.102"    # Local IP address of the server
         self.port = 5555                 # Port on which the server is running
         self.addr = (self.server, self.port)
-        self.p = self.connect()          # Player number
+        try:
+            self.p = self.connect()          # Player number
+        except socket.error as e:
+            print(e)
 
     def get_p(self):
         """
