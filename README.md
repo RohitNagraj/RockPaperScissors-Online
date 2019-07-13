@@ -15,3 +15,5 @@ Can be played with anyone anywhere across the world. <br />
 ![Alt](/Screenshots/waiting.png "Waiting Screen")
 ![Alt](/Screenshots/playing.png "Game Screen")
 ![Alt](/Screenshots/complete.png "Win Screen")
+
+![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
