@@ -4,8 +4,6 @@ from network import Network
 
 pygame.font.init()
 
-disconnected = False
-
 # Window width and height
 width = 500
 height = 500
@@ -115,16 +113,20 @@ def redraw_window(win, game, p):
 
         for btn in btns:
             btn.draw(win)
+
     pygame.display.update()
 
 
 black = (0, 0, 0)
 red = (255, 0, 0)
 blue = (0, 0, 255)
+
+# 3 buttons for rock, paper and scissors
 btns = [Button("Rock", 40, 300, black), Button("Scissors", 190, 300, red), Button("Paper", 340, 300, blue)]
 
 
 def main_game():
+
     run = True
     clock = pygame.time.Clock()
     n = Network()
@@ -168,6 +170,7 @@ def main_game():
                 run = False
                 pygame.quit()
 
+            # Button click detection
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = pygame.mouse.get_pos()
                 for btn in btns:
@@ -180,9 +183,6 @@ def main_game():
         redraw_window(win, game, player)
 
 
-
-
-
 def menu_screen():
     run = True
     clock = pygame.time.Clock()
@@ -190,13 +190,13 @@ def menu_screen():
     while run:
         clock.tick(60)
         win.fill((255, 255, 255))
-        font = pygame.font.SysFont('comicsans', 60)
+        font = pygame.font.SysFont('comicsans', 50)
         if disconnected:
             text = font.render("Opponent disconnected!", 1, (0, 80, 255))
-            win.blit(text, (30, 230))
+            win.blit(text, (40, 150))
 
         text = font.render("Click to connect!", 1, (0, 80, 255))
-        win.blit(text, (80, 230))
+        win.blit(text, (105, 230))
         pygame.display.update()
 
         for event in pygame.event.get():
@@ -209,10 +209,10 @@ def menu_screen():
                 main_game()
 
 
-
+# Whether the opponent has disconnected or not.
+disconnected = False
 
 if __name__ == '__main__':
-    global disconnected
 
     while True:
         menu_screen()
