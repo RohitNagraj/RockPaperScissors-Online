@@ -1,0 +1,2 @@
+pickle-mixin==1.0.2
+pygame==1.9.6
